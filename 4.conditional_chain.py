@@ -17,7 +17,7 @@ model1 = ChatOpenAI(model = 'gpt-4')
 
 parser = StrOutputParser()
 
-st.title("Review Sentiment Analysis with OPENAI")
+st.title("Review Sentiment Analysis with Conditional Chains and OPENAI")
 
 class Feedback(BaseModel):
 
