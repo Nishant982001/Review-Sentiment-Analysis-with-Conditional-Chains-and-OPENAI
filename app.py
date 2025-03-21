@@ -17,7 +17,7 @@ load_dotenv()
 #["meta/llama3-70b-instruct","deepseek-ai/deepseek-r1"]
 st.title("Review Sentiment Analysis with Conditional Chains and OPENAI")
 
-openai_api_key = st.sidebar.text_input(label="Nvidia API key",type="password")
+openai_api_key = st.sidebar.text_input(label="OPENAI API KEY",type="password")
 
 
 
