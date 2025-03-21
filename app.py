@@ -25,7 +25,7 @@ if not openai_api_key:
     st.info("Please add your nvidia api key to continue")
     st.stop()
 
-llm = ChatOpenAI(model='gpt-4o-mini', openai_api_key=openai_api_key)
+model1 = ChatOpenAI(model='gpt-4o-mini', openai_api_key=openai_api_key)
 
 # model1 = ChatOpenAI(model = 'gpt-4')
 
