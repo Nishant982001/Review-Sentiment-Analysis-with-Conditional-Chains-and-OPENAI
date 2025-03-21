@@ -13,11 +13,25 @@ import streamlit as st
 
 load_dotenv()
 
-model1 = ChatOpenAI(model = 'gpt-4')
+# model=st.sidebar.selectbox("Select an AI Model", available_models)
+#["meta/llama3-70b-instruct","deepseek-ai/deepseek-r1"]
+st.title("Review Sentiment Analysis with Conditional Chains and OPENAI")
+
+openai_api_key = st.sidebar.text_input(label="Nvidia API key",type="password")
+
+
+
+if not openai_api_key:
+    st.info("Please add your nvidia api key to continue")
+    st.stop()
+
+llm = ChatOpenAI(model='gpt-4o-mini', openai_api_key=openai_api_key)
+
+# model1 = ChatOpenAI(model = 'gpt-4')
 
 parser = StrOutputParser()
 
-st.title("Review Sentiment Analysis with Conditional Chains and OPENAI")
+
 
 class Feedback(BaseModel):
 
